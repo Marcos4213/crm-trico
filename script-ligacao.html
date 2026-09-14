@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Script de Ligação — CRM Tricologia</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', system-ui, sans-serif; background: #f8fafc; color: #1e293b; line-height: 1.6; }
+    .container { max-width: 700px; margin: 0 auto; padding: 20px; }
+    h1 { font-size: 20px; font-weight: 700; color: #1e293b; margin-bottom: 4px; }
+    .subtitle { font-size: 13px; color: #64748b; margin-bottom: 24px; }
+    .script-step { background: #fff; border-radius: 12px; padding: 20px; margin-bottom: 16px; box-shadow: 0 1px 3px rgba(0,0,0,0.08); }
+    .step-number { display: inline-block; background: #2563eb; color: #fff; font-size: 12px; font-weight: 700; padding: 4px 10px; border-radius: 20px; margin-bottom: 10px; }
+    .step-title { font-size: 16px; font-weight: 700; color: #1e293b; margin-bottom: 8px; }
+    .script-text { background: #f1f5f9; border-left: 3px solid #2563eb; padding: 14px 16px; border-radius: 0 8px 8px 0; font-size: 14px; color: #334155; margin-bottom: 12px; }
+    .script-text em { color: #2563eb; font-style: normal; font-weight: 600; }
+    .tip { background: #eff6ff; border-radius: 8px; padding: 12px 14px; font-size: 13px; color: #1d4ed8; }
+    .tip::before { content: "Dica: "; font-weight: 700; }
+    .objection { background: #fff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 16px; margin-bottom: 12px; }
+    .objection-q { font-weight: 700; color: #dc2626; font-size: 14px; margin-bottom: 6px; }
+    .objection-a { font-size: 14px; color: #334155; }
+    .section-title { font-size: 18px; font-weight: 700; color: #1e293b; margin: 28px 0 16px; display: flex; align-items: center; gap: 8px; }
+    .badge-obj { background: #fef2f2; color: #dc2626; }
+    .badge-script { background: #eff6ff; color: #2563eb; }
+    .close-btn { display: block; width: 100%; background: #16a34a; color: #fff; border: none; padding: 16px; border-radius: 12px; font-size: 16px; font-weight: 700; cursor: pointer; margin-top: 24px; }
+    .close-btn:hover { background: #15803d; }
+    .whatsapp-btn { display: block; width: 100%; background: #25d366; color: #fff; border: none; padding: 14px; border-radius: 12px; font-size: 15px; font-weight: 700; cursor: pointer; margin-top: 12px; text-align: center; text-decoration: none; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Script de Ligação Fria</h1>
+    <p class="subtitle">Prospecção ativa — Trichologistas autônomos</p>
+
+    <div class="script-step">
+      <span class="step-number">1</span>
+      <div class="step-title">Abertura (5 segundos)</div>
+      <div class="script-text">
+        "Oi, (nome)! Tudo bem? Aqui é o (seu nome), da <em>Opensquad</em>. 
+        Tô ligando porque a gente trabalha com <em>trichologistas</em> e vi que você atende na região de (cidade). Posso falar 2 minutos?"
+      </div>
+      <div class="tip">Se pedir para ligar depois, diga: "Claro! Posso enviar uma mensagem no WhatsApp para agendarmos?"</div>
+    </div>
+
+    <div class="script-step">
+      <span class="step-number">2</span>
+      <div class="step-title">Qualificação Rápida</div>
+      <div class="script-text">
+        "Você trabalha com <em>atendimento próprio</em> ou tem equipe? Quantos pacientes você atende por mês, mais ou menos?"
+      </div>
+      <div class="tip">Ouvir mais do que falar. Anotar respostas no CRM.</div>
+    </div>
+
+    <div class="script-step">
+      <span class="step-number">3</span>
+      <div class="step-title">Apresentação do Valor</div>
+      <div class="script-text">
+        "A gente criou um <em>CRM feito para trichologistas</em>. Você gerencia seus pacientes, agenda, histórico, lembretes de retorno, tudo pelo celular. 
+        Sem planilha, sem caderno. <em>Funciona direto no WhatsApp</em>, sem baixar nada."
+      </div>
+    </div>
+
+    <div class="script-step">
+      <span class="step-number">4</span>
+      <div class="step-title">Gatilho de Escassez</div>
+      <div class="script-text">
+        "A gente tá selecionando <em>50 trichologistas</em> para o programa piloto com <em>preço especial</em>. 
+        Já temos (X) confirmados. Quer que eu te reserve uma vaga?"
+      </div>
+    </div>
+
+    <div class="script-step">
+      <span class="step-number">5</span>
+      <div class="step-title">Próximo Passo</div>
+      <div class="script-text">
+        "Posso te enviar um <em>WhatsApp</em> com o vídeo de 30 segundos mostrando como funciona? 
+        É só pra você ver se faz sentido pra sua clínica."
+      </div>
+      <button class="whatsapp-btn" onclick="sendWhatsApp()">Enviar WhatsApp Agora</button>
+    </div>
+
+    <div class="section-title"><span class="badge-obj badge-script">⚡</span> Respostas para Objeções</div>
+
+    <div class="objection">
+      <div class="objection-q">❌ "Não tenho tempo agora"</div>
+      <div class="objection-a">"Entendo! Posso mandar um WhatsApp com o resumo? São 30 segundos de vídeo, você vê quando puder."</div>
+    </div>
+
+    <div class="objection">
+      <div class="objection-q">❌ "Já tenho sistema"</div>
+      <div class="objection-a">"Que bom! O nosso é específico para trichologistas — tem lembrete automático, histórico de tratamento e integração com WhatsApp. Quer ver a diferença?"</div>
+    </div>
+
+    <div class="objection">
+      <div class="objection-q">❌ "Quanto custa?"</div>
+      <div class="objection-a">"O plano piloto sai por R$97/mês. Mas antes de falar de preço, posso te mostrar como funciona? São 30 segundos."</div>
+    </div>
+
+    <div class="objection">
+      <div class="objection-q">❌ "Não preciso disso"</div>
+      <div class="objection-a">"Tranquilo! Só por curiosidade, você já perdeu paciente porque esqueceu de agendar retorno?"</div>
+    </div>
+
+    <div class="objection">
+      <div class="objection-q">❌ "Pode ligar outro dia"</div>
+      <div class="objection-a">"Claro! Qual o melhor horário? E posso te mandar um WhatsApp agora para não perdermos o contato?"</div>
+    </div>
+
+    <button class="close-btn" onclick="markComplete()">✅ Ligação Concluída — Registrar no CRM</button>
+  </div>
+
+  <script>
+    function sendWhatsApp() {
+      const phone = localStorage.getItem('current_lead_phone') || '';
+      const msg = encodeURIComponent('Olá! Aqui é da Opensquad. Conforme combinamos na ligação, segue o vídeo de 30 segundos sobre nosso CRM para trichologistas: [LINK]');
+      if (phone) {
+        window.open(`https://wa.me/55${phone.replace(/\D/g, '')}?text=${msg}`, '_blank');
+      } else {
+        alert('Número não encontrado. Volte ao CRM e abra a ficha do lead.');
+      }
+    }
+
+    function markComplete() {
+      alert('Ligação registrada! Volte ao CRM para atualizar o estágio do lead.');
+      window.history.back();
+    }
+  </script>
+</body>
+</html>
